@@ -12,7 +12,7 @@ class Phonebook extends Component {
     filter: "",
   };
 
-  componentDidUpdate(prevState) {
+  componentDidUpdate(_, prevState) {
     if (this.state.contacts !== prevState.contacts) {
       localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
     }
